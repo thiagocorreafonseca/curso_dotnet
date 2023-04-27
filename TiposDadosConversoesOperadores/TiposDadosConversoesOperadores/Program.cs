@@ -1,4 +1,6 @@
-﻿namespace TiposDadosConversoesOperadores
+﻿using System.IO;
+
+namespace TiposDadosConversoesOperadores
 {
     internal class Program
     {
@@ -30,6 +32,32 @@
             TimeSpan quantoTempoDeEmpresa = DateTime.Now - entradaEmpresa;
             #endregion
 
+            #region Conversões
+
+            int notaAluno = 10;
+
+            //conversao implicita
+            double notaAlunoDouble = notaAluno;
+            //conversao explicita
+            int numeroDoubleComoInt = (int)notaAlunoDouble;
+
+            //conversao utilizando Convert
+            string notaString = "10";
+
+            int notaConvert = Convert.ToInt32(notaString);
+
+            //conversão utilizado Parse
+            int notaParse = int.Parse(notaString);
+
+            if (int.TryParse(notaString, out int notaTryParse))
+            {
+
+            }
+            else 
+            {
+                Console.WriteLine("Número em formato inválido.");
+            }
+            #endregion
             Console.Read();
         }
     }
