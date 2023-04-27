@@ -31,7 +31,7 @@ namespace TiposDadosConversoesOperadores
             DateTime entradaEmpresa = new DateTime(2023, 01, 01);
             TimeSpan quantoTempoDeEmpresa = DateTime.Now - entradaEmpresa;
             #endregion
-
+           
             #region Conversões
 
             int notaAluno = 10;
@@ -57,6 +57,31 @@ namespace TiposDadosConversoesOperadores
             {
                 Console.WriteLine("Número em formato inválido.");
             }
+            #endregion
+
+            #region Operadores Aritmeticos
+            //Unários ++, --, +, -
+            int numeroOperador = 4;
+
+            // sufixado
+            Console.WriteLine(numeroOperador++);
+            Console.WriteLine(numeroOperador--);
+
+            //prefixado
+            Console.WriteLine(++numeroOperador);
+            Console.WriteLine(--numeroOperador);
+
+            Console.WriteLine(numeroOperador);
+            Console.WriteLine(-numeroOperador);
+            Console.WriteLine(-(-numeroOperador));
+
+            //Binários + - * /
+            var soma = 4 + 5;
+            var subtracao = 4 - 5;
+            var multiplicacao = 4 * 5;
+            var divisao = 20 / 3;
+            var divisaoDouble = (double)20 / 3;
+            var multiplos = (4 * 5) + 10;
             #endregion
             Console.Read();
         }
